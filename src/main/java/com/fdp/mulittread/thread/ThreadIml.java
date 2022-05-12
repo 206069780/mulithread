@@ -1,4 +1,4 @@
-package com.fdp.mulittread;
+package com.fdp.mulittread.thread;
 
 import java.util.logging.Logger;
 

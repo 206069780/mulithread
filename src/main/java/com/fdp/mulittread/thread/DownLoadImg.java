@@ -1,7 +1,6 @@
-package com.fdp.mulittread;
+package com.fdp.mulittread.thread;
 
 import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.FilenameUtils;
 
 import java.io.File;
 import java.io.IOException;

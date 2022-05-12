@@ -46,7 +46,33 @@
 
   - 实现Runable接口
 
+    ```java
+    public class RunableTest implements Runnable {
+        Logger logger = Logger.getLogger(RunableTest.class.getName());
+        private String name;
+    
+        public RunableTest(String name) {
+            this.name = name;
+        }
+    
+        @Override
+        public void run() {
+            logger.info(name);
+        }
+    
+        public static void main(String[] args) {
+            for (int i = 0; i < 20; i++) {
+                new Thread(new RunableTest(i + "")).start();
+            }
+        }
+    }
+    ```
+
+    
+
   - 实现Callable接口
+
+    
 
 - 多线程
 
