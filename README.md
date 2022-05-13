@@ -72,9 +72,55 @@
 
   - 实现Callable接口
 
+    - 实现callable接口，需要返回数据
+    
+    - 重写call方法需要抛出异常
+    
+    - 创建目标对象
+    
+    - 创建执行服务
+    
+    - 提交执行
+    
+    - 获取结果
+    
+    - 关闭服务
+    
+      ```java
+      public class CallAbleTest1 implements Callable<String> {
+          private String name;
+      
+          public CallAbleTest1(String name) {
+              this.name = name;
+          }
+      
+          @Override
+          public String call() throws Exception {
+              System.out.println(name);
+              return "";
+          }
+      
+          public static void main(String[] args) {
+              CallAbleTest1 callAble1 = new CallAbleTest1("张三");
+              CallAbleTest1 callAble2 = new CallAbleTest1("李四");
+              CallAbleTest1 callAble3 = new CallAbleTest1("王武");
+              ExecutorService executorService = Executors.newFixedThreadPool(3);
+              executorService.submit(callAble1);
+              executorService.submit(callAble2);
+              executorService.submit(callAble3);
+              executorService.shutdown();
+      
+          }
+      }
+      ```
+    
+      
+    
     
 
 - 多线程
+
+- 静态代理对比Thread
 
 ## 线程实现
 
